@@ -89,7 +89,7 @@ open class Device {
     }
     
     // MARK: Device UUID
-    static publiv var uuid: String {
+    static public var uuid: String {
         return UIDevice.current.identifierForVendor!.uuidString
     }
     
