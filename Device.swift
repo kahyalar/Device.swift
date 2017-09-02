@@ -126,23 +126,31 @@ open class Device {
     
     // MARK: Device is jailbroken or not
     static public var isJailBroken: Bool {
-        var isJailBroken = false;
-        
-        let cydiaPath = "/Applications/Cydia.app";
-        let aptPath = "/private/var/lib/apt/";
-        
-        if FileManager.default.fileExists(atPath: cydiaPath) {
-            isJailBroken = true;
+        if (!isSimulator) {
+            if FileManager.default.fileExists(atPath: "/Applications/Cydia.app")
+                || FileManager.default.fileExists(atPath: "/Library/MobileSubstrate/MobileSubstrate.dylib")
+                || FileManager.default.fileExists(atPath: "/bin/bash")
+                || FileManager.default.fileExists(atPath: "/usr/sbin/sshd")
+                || FileManager.default.fileExists(atPath: "/etc/apt")
+                || FileManager.default.fileExists(atPath: "/private/var/lib/apt/")
+                || UIApplication.shared.canOpenURL(URL(string:"cydia://package/com.example.package")!) {
+                return true
+            }
+            else {
+                do
+                {
+                    try "Test".write(toFile:"/private/Test.txt", atomically: true, encoding: String.Encoding.utf8)
+                    return true
+                }
+                catch
+                {
+                    return false
+                }
+            }
         }
-        
-        if FileManager.default.fileExists(atPath: aptPath) {
-            isJailBroken = true;
+        else {
+            return false
         }
-        
-        let url = URL.init(string:"cydia://package/com.example.package")
-        let cydiaJailBroken = UIApplication.shared.canOpenURL(url!)
-        
-        return isJailBroken || cydiaJailBroken;
     }
     
     // MARK: Battery state
