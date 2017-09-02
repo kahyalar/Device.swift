@@ -10,7 +10,7 @@ Device.swift is a simple helper to get information about the user's device on yo
   - Getting the system version. (e.g. 9.0, 10.0)
   - Getting the undetermined/determined model names of devices. (iPhone / iPhone 6s Plus) more specific!
   - Getting the UUID of device.
-  - You can check define is iPhone/iPod/iPod/Apple TV/Simulator or not. It's easy!
+  - You can check defination is iPhone/iPod/iPod/Apple TV/Simulator or not. That's easy!
   - You can check the device is jailbroken 💣 or not.
   - You can get the battery state / level of current device.
   - You can get the language code / region code of current device.
