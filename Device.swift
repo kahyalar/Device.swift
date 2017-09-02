@@ -61,35 +61,35 @@ public extension UIDevice {
 open class Device {
     // MARK: Device name
     // The name of personal device, like "Batuhan's iPhone"
-    public static var name: String {
+    static public var name: String {
         return UIDevice.current.name
     }
     
     // MARK: System name
     // The name of running OS in the device, such as iOS, tvOS and much more.
-    public static var systemName: String {
+    static public var systemName: String {
         return UIDevice.current.systemName
     }
     
     // MARK: System version
     // The version of running OS in the device. (e.g. 9.0, 10.0.)
-    public static var systemVersion: String {
+    static public var systemVersion: String {
         return UIDevice.current.systemVersion
     }
     
     // MARK: Device model
     // The model of device
-    public static var model: String {
+    static public var model: String {
         return UIDevice.current.model
     }
     
     // MARK: Determined device model
-    public static var determinedModel: String {
+    static public var determinedModel: String {
         return UIDevice.current.modelName
     }
     
     // MARK: Device UUID
-    public static var uuid: String {
+    static publiv var uuid: String {
         return UIDevice.current.identifierForVendor!.uuidString
     }
     
