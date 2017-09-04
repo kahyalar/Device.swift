@@ -51,11 +51,6 @@ public extension UIDevice {
         default:                                        return identifier
         }
     }
-    
-    var batteryStatus: UIDeviceBatteryState {
-        UIDevice.current.isBatteryMonitoringEnabled = true
-        return UIDevice.current.batteryState
-    }
 }
 
 open class Device {
@@ -155,7 +150,7 @@ open class Device {
     
     // MARK: Battery state
     static public var batteryState: UIDeviceBatteryState {
-        return UIDevice.current.batteryStatus
+        return UIDevice.current.batteryState
     }
     
     // MARK: Battery level
