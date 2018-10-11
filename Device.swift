@@ -48,11 +48,11 @@ public extension UIDevice {
         case "iPad4,4", "iPad4,5", "iPad4,6":           return "iPad Mini 2"
         case "iPad4,7", "iPad4,8", "iPad4,9":           return "iPad Mini 3"
         case "iPad5,1", "iPad5,2":                      return "iPad Mini 4"
-        case "iPad6,3", "iPad6,4":                      return "iPad Pro 9.7 Inch"
-        case "iPad6,7", "iPad6,8":                      return "iPad Pro 12.9 Inch"
-        case "iPad7,1", "iPad7,2":                      return "iPad Pro 12.9 Inch 2. Generation"
-        case "iPad7,3", "iPad7,4":                      return "iPad Pro 10.5 Inch"
-        case "AppleTV5,3":                              return "Apple TV"
+        case "iPad6,3", "iPad6,4":                      return "iPad Pro 9.7 inch"
+        case "iPad6,7", "iPad6,8":                      return "iPad Pro 12.9 inch"
+        case "iPad7,1", "iPad7,2":                      return "iPad Pro 12.9 inch (2nd generation)"
+        case "iPad7,3", "iPad7,4":                      return "iPad Pro 10.5 inch"
+        case "AppleTV5,3":                              return "Apple TV (4rd generation)"
         case "i386", "x86_64":                          return "Simulator"
         default:                                        return identifier
         }
