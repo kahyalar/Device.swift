@@ -34,6 +34,9 @@ public extension UIDevice {
         case "iPhone10,1", "iPhone10,4":                return "iPhone 8"
         case "iPhone10,2", "iPhone10,5":                return "iPhone 8 Plus"
         case "iPhone10,3", "iPhone10,6":                return "iPhone X"
+        case "iPhone11,8":                              return "iPhone XR"
+        case "iPhone11,2":                              return "iPhone XS"
+        case "iPhone11,6", "iPhone11,4":                return "iPhone XS Max"
         case "iPhone8,4":                               return "iPhone SE"
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2"
         case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad 3"
@@ -121,35 +124,7 @@ open class Device {
     static public var isTV: Bool {
         return determinedModel.contains("TV")
     }
-    
-    // MARK: Device is jailbroken or not
-    static public var isJailBroken: Bool {
-        if (!isSimulator) {
-            if FileManager.default.fileExists(atPath: "/Applications/Cydia.app")
-                || FileManager.default.fileExists(atPath: "/Library/MobileSubstrate/MobileSubstrate.dylib")
-                || FileManager.default.fileExists(atPath: "/bin/bash")
-                || FileManager.default.fileExists(atPath: "/usr/sbin/sshd")
-                || FileManager.default.fileExists(atPath: "/etc/apt")
-                || FileManager.default.fileExists(atPath: "/private/var/lib/apt/")
-                || UIApplication.shared.canOpenURL(URL(string:"cydia://package/com.example.package")!) {
-                return true
-            }
-            else {
-                do
-                {
-                    try "Test".write(toFile:"/private/Test.txt", atomically: true, encoding: String.Encoding.utf8)
-                    return true
-                }
-                catch
-                {
-                    return false
-                }
-            }
-        }
-        else {
-            return false
-        }
-    }
+
     
     // MARK: Battery state
     static public var batteryState: UIDeviceBatteryState {
