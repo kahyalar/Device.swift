@@ -1,4 +1,4 @@
-![logo](https://github.com/kahyalar/Device.swift/tree/master/images/title.png)
+![logo](https://github.com/kahyalar/Device.swift/blob/master/images/title.png)
 
 Device.swift is a simple helper to get information about the user's device on your iOS projects. 📱⚒
 
