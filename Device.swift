@@ -126,7 +126,7 @@ open class Device {
     }
 
     // MARK: Battery state
-    static public var batteryState: UIDeviceBatteryState {
+    static public var batteryState: UIDevice.BatteryState {
         return UIDevice.current.batteryState
     }
     
