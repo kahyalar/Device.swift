@@ -125,7 +125,6 @@ open class Device {
         return determinedModel.contains("TV")
     }
 
-    
     // MARK: Battery state
     static public var batteryState: UIDeviceBatteryState {
         return UIDevice.current.batteryState

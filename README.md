@@ -19,3 +19,11 @@ Device.swift is a simple helper to get information about the user's device on yo
 
 Just download and drag and drop it to your project this class then start to use it! :) Please give me the feedback to add new features this class!
 
+### Usage
+
+After importing, you can call class and properties easily.
+
+```swift
+print(Device.name) //iPhone
+```
+
